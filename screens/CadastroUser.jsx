@@ -2,7 +2,7 @@ import { Button} from "react-native-elements";
 import { View } from "react-native-web";
 import { InputComponent } from "../components/InputComponent";
 
-const CadastroUser = () => {
+const CadastroUser = ({navigation}) => {
     return (
   <View style={{flex: 1, flexDirection: 'column', alignItems:"center", justifyContent:"center", backgroundColor:"#E6DDD7"}}>
   <InputComponent  label='nome'></InputComponent>

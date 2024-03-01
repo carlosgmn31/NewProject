@@ -5,8 +5,10 @@ import { Input } from "../components/InputComponent";
 const Cadastro = () => {
     return (
   <View style={{flex: 1, flexDirection: 'column', alignItems:"center", justifyContent:"center", backgroundColor:"#E6DDD7"}}><Input placeholder='Nome'/>
-  <Input placeholder='E-mail'/>
-  <Input placeholder="Senha" secureTextEntry={true}/>
+  <InputComponent label='nome'></InputComponent>
+  <InputComponent label='cpf'></InputComponent>
+  <InputComponent label='email'></InputComponent>
+  <InputComponent label='senha'></InputComponent>
   <Button buttonStyle={{backgroundColor:"green"}} title="Cadastrar"  style={{marginTop:"5px"} } />
   </View>
   );
