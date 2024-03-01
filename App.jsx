@@ -1,5 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { StyleSheet } from "react-native";
+import CadastroUser from "./screens/CadastroUser";
 import Home from "./screens/Home";
 import Lista from "./screens/Lista";
 
@@ -11,10 +13,14 @@ return (
 <NavigationContainer>
 <Stack.Navigator initialRouteName="Home"
       screenOptions={{
-        headerShown: false
+        headerStyle:{backgroundColor:'#3C6EF4'},
+        headerTitleAlign:"center",
+        headerTitleStyle:{color:"#ffffff"},
+        headerShown: true
       }}>
-<Stack.Screen  name="Home" component={Home} />
-<Stack.Screen  name="Lista" component={Lista} />
+<Stack.Screen options={{headerShown:false}} name="Home" component={Home} />
+<Stack.Screen options={{title:"Lista de Contatos"}} name="Lista" component={Lista} />
+<Stack.Screen options={{title:"Usuário"}} name="CadastroUser" component={CadastroUser} />
 </Stack.Navigator>
 </NavigationContainer>
 
@@ -22,3 +28,11 @@ return (
 }
 
 export default App;
+
+
+const stylesGlobal = StyleSheet.create({
+  stylesGlobal: {
+  flex: 1,
+  padding: 20,
+  },
+  });

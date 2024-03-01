@@ -10,12 +10,12 @@ const Home = ({navigation}) => {
     rounded
     source={{
       uri:
-        'do-utilizador.png',
+        '../assets/do-utilizador.png',
     } }
   />
 
-  <InputComponent placeholder='Login' label='Login'></InputComponent>
-  <InputComponent placeholder='Senha' label='Senha'></InputComponent>
+  <InputComponent label='login'></InputComponent>
+  <InputComponent label='senha'></InputComponent>
   <Button  buttonStyle={{backgroundColor:"#3C6EF4", width: 250 }}  title="Logar" style={{marginTop:"5px"}}  onPress={()=>navigation.navigate('Lista')} /> 
   <Button buttonStyle={{backgroundColor:"#F42E26",  width: 250}} title="Cadastre-se" style={{marginTop:"5px"}}  onPress={()=>navigation.navigate('CadastroUser')}  />
   </View>
