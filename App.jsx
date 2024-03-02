@@ -4,13 +4,14 @@ import { StyleSheet } from "react-native";
 import CadastroUser from "./screens/CadastroUser";
 import Home from "./screens/Home";
 import Lista from "./screens/Lista";
-import { Text, TouchableOpacity } from "react-native-web";
+import { Text, TouchableOpacity } from "react-native";
 import Cadastro from "./screens/Cadastro";
+import { Button } from "react-native-elements";
 
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+function App({ navigation }) {
 return (
 <NavigationContainer>
 <Stack.Navigator initialRouteName="Home"
@@ -23,27 +24,32 @@ return (
       }}>
 <Stack.Screen options={{headerShown:false}} name="Home" component={Home} />
 <Stack.Screen  name="Cadastro" component={Cadastro} />
-<Stack.Screen
+<Stack.Screen 
   options={{
     title: "Lista de Contatos",
     headerRight: () => (
       <TouchableOpacity
-      
-        onPress={() => navigation.navigate('Cadastro')}
         style={{
           padding: 10,
           borderRadius: 50,
-          backgroundColor: "transparent",
+          marginRight: 10, 
         }}
       >
-        <Text style={{ color: "#ffffff", fontSize: 20 }}>+</Text>
+
+<Button
+        style={{ color: "#ffffff", fontSize: 20 }}
+        title="+"
+        onPress={() => navigation.navigate('CadastroUser')}
+      />
+        
       </TouchableOpacity>
-    )
+    ),
   }}
   name="Lista"
   component={Lista}
 />
-<Stack.Screen options={{title:"Usuário"}} name="CadastroUser" component={CadastroUser} />
+
+<Stack.Screen options={{title:"Cadastro"}} name="CadastroUser" component={CadastroUser} />
 </Stack.Navigator>
 </NavigationContainer>
 
