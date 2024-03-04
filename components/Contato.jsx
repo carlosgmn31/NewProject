@@ -5,10 +5,10 @@ import { ScreenWidth } from 'react-native-elements/dist/helpers';
 
 const telaPedaco = ScreenWidth *0.8
 
-export const Contato = ({nome,numero}) => {
+export const Contato = ({nome,numero,navigation}) => {
   return (
          <View style={{alignItems:"center", justifyContent:"center", backgroundColor:"#E6DDD7"}} >
-<ListItem bottomDivider>
+<ListItem bottomDivider onPress={()=>navigation.navigate('Cadastro',nome=nome,numero=numero )}>
 <Avatar 
   size={'small'}
     rounded
