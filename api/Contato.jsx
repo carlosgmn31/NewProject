@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const instance = axios.create({
-    baseURL: 'http://localhost:3000'
+    baseURL: 'http://192.168.137.177:3000'
 })
 
 
@@ -17,6 +17,10 @@ const Contato = {
 
     atualizarContato: (contato) => {
         return instance.put("/contact/" + contato.id, contato);
+    },
+
+    getContatoPorId: (idContato) =>{
+        return instance.get("/contact/" + idContato);
     },
 
     apagarContato: (idContato) =>{

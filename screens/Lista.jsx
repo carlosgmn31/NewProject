@@ -21,21 +21,31 @@ useEffect(()=>{
 
  
 },[])
+const editarContato = (contato) => {
+        
+  navigation.navigate('EditarContato', contato);
+
+}
+
     return (
         
   <View style={{flex: 1, flexDirection: 'column', alignItems:"fix", justifyContent:'top', backgroundColor:"#E6DDD7"}} >
  {
                     list.map((l, i) => (
-                        <TouchableOpacity key={i} onPress={()=>navigation.navigate('EditarContato')}>
+                        <TouchableOpacity key={i} 
+                        
+                        //navigate passando informações do contato	
+                        onPress={() => editarContato(l)}>
+                          {console.log(l)}
                             <ListItem bottomDivider>
                             <Avatar 
-  size={'small'}
-    rounded
-    source={{
-      uri:
-        '../assets/contato.png',
-    } }
-  />
+                                size={'small'}
+                                  rounded
+                                  source={{
+                                    uri:
+                                      '../assets/contato.png',
+                                  } }
+                                />
                                <ListItem.Content>
                                     <ListItem.Title>{l.nome}</ListItem.Title>
                                     <ListItem.Subtitle>{l.numero}</ListItem.Subtitle>
