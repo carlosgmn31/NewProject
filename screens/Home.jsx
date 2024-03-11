@@ -1,8 +1,22 @@
-import { Avatar, Button } from "react-native-elements";
-import { StyleSheet, View } from "react-native-web";
+import { Avatar, Button,  } from "react-native-elements";
+import { StyleSheet, View,Text,TextInput } from "react-native";
 import { InputComponent } from "../components/InputComponent";
+import { useNavigation } from "@react-navigation/native";
+import { TouchableOpacity } from "react-native";
 
-const Home = ({navigation}) => {
+
+
+
+const Home = () => {
+    const navigation = useNavigation();
+  
+    const logar = () => {
+      navigation.navigate('Lista');
+    };
+    const navToCadastrar = () => {
+      navigation.navigate('Cadastro');
+    };
+    
     return (
   <View style={{flex: 1, flexDirection: 'column', alignItems:"center", justifyContent:"center", backgroundColor:"#E6DDD7"}} >
   <Avatar 
@@ -13,11 +27,14 @@ const Home = ({navigation}) => {
         '../assets/do-utilizador.png',
     } }
   />
+  <Text style={{paddingLeft:10, fontSize: 20, width: 250}}>login</Text>
+  <TextInput style={{backgroundColor:'#FFF', width: 250, height:40}}></TextInput>
+  <Text style={{paddingLeft:10, fontSize: 20, width: 250}}>senha</Text>
+  <TextInput style={{backgroundColor:'#FFF', width: 250, height:40}}></TextInput>
 
-  <InputComponent label='login'></InputComponent>
-  <InputComponent label='senha'></InputComponent>
-  <Button  buttonStyle={{backgroundColor:"#3C6EF4", width: 250 }}  title="Logar" style={{marginTop:"5px"}}  onPress={()=>navigation.navigate('Lista')} /> 
-  <Button buttonStyle={{backgroundColor:"#F42E26",  width: 250}} title="Cadastre-se" style={{marginTop:"5px"}}  onPress={()=>navigation.navigate('CadastroUser')}  />
+  <Button  onPress={logar} buttonStyle={{backgroundColor:"#3C6EF4", width: 250, }}  title="Logar" style={{marginTop:"15px"}}   /> 
+  
+  <Button  onPress={navToCadastrar} buttonStyle={{backgroundColor:"#F42E26",  width: 250, marginTop:5}} title="Cadastre-se" style={{marginTop:"5px"}}    />
   </View>
     );
     };

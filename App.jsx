@@ -6,7 +6,8 @@ import Home from "./screens/Home";
 import Lista from "./screens/Lista";
 import { Text, TouchableOpacity } from "react-native";
 import Cadastro from "./screens/Cadastro";
-import { Button } from "react-native-elements";
+import { Button, Icon } from "react-native-elements";
+import EditarContato from "./screens/EditarContato";
 
 
 const Stack = createNativeStackNavigator();
@@ -27,19 +28,15 @@ return (
 <Stack.Screen options={{title:"Cadastro"}} name="CadastroUser" component={CadastroUser} />
 
 <Stack.Screen  name="Cadastro" component={Cadastro} />
+<Stack.Screen  name="EditarContato" component={EditarContato} />
 
 <Stack.Screen   options={({ navigation }) => ({
               headerRight: () => ( 
-                <TouchableOpacity onPress={() => navigation.navigate("Cadastro")} >
-                  <Button
-        style={{ 
-          
-          color: "#ffffff",
-         fontSize: 20  }}
-        title="+"
-        onPress={() => navigation.navigate('Cadastro')}
-      />
-                </TouchableOpacity>
+                <TouchableOpacity >
+                <Icon name="add" type='' size={30} color={'white'} 
+                   onPress={() => navigation.navigate('Cadastro')}
+                />
+            </TouchableOpacity>
               ),
             })} name="Lista" component={Lista} 
 
