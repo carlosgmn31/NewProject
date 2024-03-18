@@ -11,7 +11,6 @@
       "numero": "8198956"
     },
     {
-<<<<<<< HEAD
       "id": "69f4",
       "nome": "2",
       "numero": "2"
@@ -33,17 +32,6 @@
       "nome": "teste da silva",
       "numero": "819856565",
       "email": "testedasilva@gmail.com"
-    },
-    {
-      "id": "e8d8",
-      "nome": "teste",
-      "numero": "",
-      "email": "carlos@teste.com"
-=======
-      "id": "9657",
-      "nome": "",
-      "numero": ""
->>>>>>> 2ae2e706646168718f00c407e74b22e4132456ef
     }
   ]
 }

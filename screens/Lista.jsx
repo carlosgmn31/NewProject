@@ -26,11 +26,7 @@ useEffect(()=>{
 
  
 },[])
-const editarContato = (contato) => {
-        
-  navigation.navigate('EditarContato', contato);
 
-}
 
     return (
         
