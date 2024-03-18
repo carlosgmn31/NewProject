@@ -1,10 +1,9 @@
-import { Button} from "react-native-elements";
-import { View } from "react-native-web";
-import { InputComponent } from "../components/InputComponent";
-import { Text, TextInput } from "react-native";
-import Contato from "../api/Contato";
-import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { useState } from "react";
+import { Text, TextInput } from "react-native";
+import { Button } from "react-native-elements";
+import { View } from "react-native-web";
+import Contato from "../api/Contato";
 
 const Cadastro = () => {
   const [nome, setNome] = useState("")
