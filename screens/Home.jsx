@@ -52,7 +52,7 @@ const Home = () => {
   <Text style={{paddingLeft:10, fontSize: 20, width: 250}}>login</Text>
   <TextInput value={email} onChangeText={setEmail}  style={{backgroundColor:'#FFF', width: 250, height:40}}></TextInput>
   <Text style={{paddingLeft:10, fontSize: 20, width: 250}}>senha</Text>
-  <TextInput value={senha} onChangeText={setSenha}  style={{backgroundColor:'#FFF', width: 250, height:40}}></TextInput>
+  <TextInput secureTextEntry='true' value={senha} onChangeText={setSenha}  style={{backgroundColor:'#FFF', width: 250, height:40}}></TextInput>
 
   <Button  onPress={login} buttonStyle={{backgroundColor:"#3C6EF4", width: 250, }}  title="Logar" style={{marginTop:"15px"}}   /> 
   

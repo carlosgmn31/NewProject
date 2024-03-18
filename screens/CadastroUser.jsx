@@ -56,7 +56,7 @@ const CadastroUser = () => {
   <Text style={styles.label}>e-mail</Text>
   <TextInput  value={email}
             onChangeText={setEmail} style={styles.input}></TextInput>
-  <Text style={styles.label}>senha</Text>
+  <Text secureTextEntry='true' style={styles.label}>senha</Text>
   <TextInput  value={senha}
             onChangeText={setSenha} style={styles.input}></TextInput>
   <Button  buttonStyle={{backgroundColor:"#3C6EF4", width: 250 }}  title="Salvar" style={{marginTop:"5px"}}  onPress={() => salvar()}/> 
