@@ -8,6 +8,11 @@ import { Avatar, ListItem } from "react-native-elements";
 
 const Lista = ({navigation}) => {
   const [list, setList] = useState([])
+  const editarContato = (contato) => {
+        
+    navigation.navigate('EditarContato', contato);
+
+}
 
 useEffect(()=>{
 
@@ -26,7 +31,7 @@ useEffect(()=>{
   <View style={{flex: 1, flexDirection: 'column', alignItems:"fix", justifyContent:'top', backgroundColor:"#E6DDD7"}} >
  {
                     list.map((l, i) => (
-                        <TouchableOpacity key={i} onPress={()=>navigation.navigate('EditarContato')}>
+                        <TouchableOpacity key={i} onPress={()=>navigation.navigate(editarContato(l))}>
                             <ListItem bottomDivider>
                             <Avatar 
   size={'small'}
