@@ -37,15 +37,7 @@ const editarContato = (contato) => {
   <View style={{flex: 1, flexDirection: 'column', alignItems:"fix", justifyContent:'top', backgroundColor:"#E6DDD7"}} >
  {
                     list.map((l, i) => (
-<<<<<<< HEAD
                         <TouchableOpacity key={i} onPress={()=>navigation.navigate(editarContato(l))}>
-=======
-                        <TouchableOpacity key={i} 
-                        
-                        //navigate passando informações do contato	
-                        onPress={() => editarContato(l)}>
-                          {console.log(l)}
->>>>>>> 2ae2e706646168718f00c407e74b22e4132456ef
                             <ListItem bottomDivider>
                             <Avatar 
                                 size={'small'}
