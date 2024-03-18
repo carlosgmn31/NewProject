@@ -7,7 +7,7 @@ import Contato from "../api/Contato";
 
 const Cadastro = () => {
   const [nome, setNome] = useState("")
-  const [email, setEmail] = useState()
+  const [email, setEmail] = useState("")
   const [telefone, setTelefone] = useState("")
 
 
@@ -22,7 +22,6 @@ const Cadastro = () => {
       .then(response => {
           console.info(response.status)
           listaContato()
-          
       }).catch(error => {
           console.warn(error)
       })

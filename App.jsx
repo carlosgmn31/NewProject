@@ -32,12 +32,19 @@ return (
 
 <Stack.Screen   options={({ navigation }) => ({
               headerRight: () => ( 
-                <TouchableOpacity >
+                <TouchableOpacity  style={styles.button}>
                 <Icon name="add" type='' size={30} color={'white'} 
                    onPress={() => navigation.navigate('Cadastro')}
                 />
             </TouchableOpacity>
               ),
+              headerLeft: () => ( 
+                <TouchableOpacity  style={styles.button}>
+                <Icon name="logout" type='' size={30} color={'white'} 
+                   onPress={() => navigation.navigate('Home')}
+                />
+            </TouchableOpacity>
+              )
             })} name="Lista" component={Lista} 
 
 
@@ -51,9 +58,13 @@ return (
 export default App;
 
 
-const stylesGlobal = StyleSheet.create({
+const styles = StyleSheet.create({
   stylesGlobal: {
   flex: 1,
   padding: 20,
   },
+  button: {
+    paddingLeft: 10,
+    paddingRight: 10,
+},
   });
