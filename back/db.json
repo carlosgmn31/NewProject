@@ -1,16 +1,3 @@
 {
-  "contact": [
-    {
-      "id": "a646",
-      "nome": "teste",
-      "numero": "teste",
-      "email": "teste"
-    },
-    {
-      "id": "dbbd",
-      "nome": "carlos da silva",
-      "numero": "81986322149",
-      "email": "teste@gmail.com"
-    }
-  ]
+  "contact": []
 }

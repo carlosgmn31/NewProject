@@ -28,7 +28,7 @@ return (
 <Stack.Screen options={{title:"Cadastro"}} name="CadastroUser" component={CadastroUser} />
 
 <Stack.Screen  name="Cadastro" component={Cadastro} />
-<Stack.Screen  name="EditarContato" component={EditarContato} />
+<Stack.Screen options={{title: "Editar Contato"}} name="EditarContato" component={EditarContato} />
 
 <Stack.Screen   options={({ navigation }) => ({
               headerRight: () => ( 
